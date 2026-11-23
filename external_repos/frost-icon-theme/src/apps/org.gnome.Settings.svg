@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Frost org.gnome.Settings — app family. Settings — a rounded glass gear with a white hub. -->
+  <defs>
+    <!-- palette token: green (light → deep) -->
+    <linearGradient id="tint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#93E4AE"/>
+      <stop offset="1" stop-color="#1FAE63"/>
+    </linearGradient>
+    <linearGradient id="plate-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".28"/>
+    </linearGradient>
+    <linearGradient id="rim-stroke" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".70"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".12"/>
+    </linearGradient>
+    <rect id="back-shape" x="12" y="12" width="104" height="104" rx="28" fill="url(#tint)"/>
+    <path id="plate-shape" d="M53.843 38.09Q56.245 37.095 57.014 34.612L58.184 30.839Q58.954 28.355 61.554 28.355L66.446 28.355Q69.046 28.355 69.816 30.839L70.986 34.612Q71.755 37.095 74.157 38.09L75.139 38.497Q77.541 39.492 79.841 38.28L83.336 36.439Q85.636 35.227 87.475 37.066L90.934 40.525Q92.773 42.364 91.561 44.664L89.72 48.159Q88.508 50.459 89.503 52.861L89.91 53.843Q90.905 56.245 93.388 57.014L97.161 58.184Q99.645 58.954 99.645 61.554L99.645 66.446Q99.645 69.046 97.161 69.816L93.388 70.986Q90.905 71.755 89.91 74.157L89.503 75.139Q88.508 77.541 89.72 79.841L91.561 83.336Q92.773 85.636 90.934 87.475L87.475 90.934Q85.636 92.773 83.336 91.561L79.841 89.72Q77.541 88.508 75.139 89.503L74.157 89.91Q71.755 90.905 70.986 93.388L69.816 97.161Q69.046 99.645 66.446 99.645L61.554 99.645Q58.954 99.645 58.184 97.161L57.014 93.388Q56.245 90.905 53.843 89.91L52.861 89.503Q50.459 88.508 48.159 89.72L44.664 91.561Q42.364 92.773 40.525 90.934L37.066 87.475Q35.227 85.636 36.439 83.336L38.28 79.841Q39.492 77.541 38.497 75.139L38.09 74.157Q37.095 71.755 34.612 70.986L30.839 69.816Q28.355 69.046 28.355 66.446L28.355 61.554Q28.355 58.954 30.839 58.184L34.612 57.014Q37.095 56.245 38.09 53.843L38.497 52.861Q39.492 50.459 38.28 48.159L36.439 44.664Q35.227 42.364 37.066 40.525L40.525 37.066Q42.364 35.227 44.664 36.439L48.159 38.28Q50.459 39.492 52.861 38.497z"/>
+    <clipPath id="plate-clip"><use xlink:href="#plate-shape"/></clipPath>
+    <filter id="blur-shadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="blur-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="blur-frost" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+
+  <ellipse id="shadow" cx="64" cy="113" rx="42" ry="4" fill="#000000" opacity=".12" filter="url(#blur-shadow)"/>
+  <use id="glow" xlink:href="#back-shape" transform="translate(0 4)" opacity=".35" filter="url(#blur-glow)"/>
+  <use id="back" xlink:href="#back-shape"/>
+  <g id="frost" clip-path="url(#plate-clip)"><use xlink:href="#back-shape" filter="url(#blur-frost)"/></g>
+  <use id="plate" xlink:href="#plate-shape" fill="url(#plate-fill)"/>
+  <g id="rim" clip-path="url(#plate-clip)">
+    <use xlink:href="#plate-shape" fill="none" stroke="url(#rim-stroke)" stroke-width="3"/>
+  </g>
+  <g id="glyph"><circle cx="64" cy="64" r="12" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

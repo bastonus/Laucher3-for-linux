@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Frost org.gnome.Screenshot — app family. Screenshot — a glass capture area inside white selection corners, crosshair. -->
+  <defs>
+    <!-- palette token: red (light → deep) -->
+    <linearGradient id="tint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF8E80"/>
+      <stop offset="1" stop-color="#EE3048"/>
+    </linearGradient>
+    <linearGradient id="plate-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".28"/>
+    </linearGradient>
+    <linearGradient id="rim-stroke" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".70"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".12"/>
+    </linearGradient>
+    <rect id="back-shape" x="12" y="12" width="104" height="104" rx="28" fill="url(#tint)"/>
+    <path id="plate-shape" d="M42 38h44a8 8 0 0 1 8 8v36a8 8 0 0 1 -8 8h-44a8 8 0 0 1 -8 -8v-36a8 8 0 0 1 8 -8z"/>
+    <!-- size hints -->
+    <path id="plate-shape-16" d="M0 0z"/>
+    <path id="plate-shape-22" d="M0 0z"/>
+    <path id="plate-shape-24" d="M0 0z"/>
+    <g id="glyph-16" transform="scale(8.0000)"><path data-keep-white="1" d="M3 3h4v2H5v2H3zM9 3h4v4h-2V5H9zM13 9v4H9v-2h2V9zM3 13V9h2v2h2v2zM7 7h2v2H7z" fill="#FFFFFF"/></g>
+    <g id="glyph-22" transform="scale(5.8182)"><path data-keep-white="1" d="M4 4h5v2H6v3H4zM13 4h5v5h-2V6h-3zM18 13v5h-5v-2h3v-3zM4 18v-5h2v3h3v2zM10 10h2v2h-2z" fill="#FFFFFF"/></g>
+    <g id="glyph-24" transform="scale(5.3333)"><path data-keep-white="1" d="M4 4h6v2H6v4H4zM14 4h6v6h-2V6h-4zM20 14v6h-6v-2h4v-4zM4 20v-6h2v4h4v2zM11 11h2v2h-2z" fill="#FFFFFF"/></g>
+    <clipPath id="plate-clip"><use xlink:href="#plate-shape"/></clipPath>
+    <filter id="blur-shadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="blur-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="blur-frost" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+
+  <ellipse id="shadow" cx="64" cy="113" rx="42" ry="4" fill="#000000" opacity=".12" filter="url(#blur-shadow)"/>
+  <use id="glow" xlink:href="#back-shape" transform="translate(0 4)" opacity=".35" filter="url(#blur-glow)"/>
+  <use id="back" xlink:href="#back-shape"/>
+  <g id="frost" clip-path="url(#plate-clip)"><use xlink:href="#back-shape" filter="url(#blur-frost)"/></g>
+  <use id="plate" xlink:href="#plate-shape" fill="url(#plate-fill)"/>
+  <g id="rim" clip-path="url(#plate-clip)">
+    <use xlink:href="#plate-shape" fill="none" stroke="url(#rim-stroke)" stroke-width="3"/>
+  </g>
+  <g id="glyph"><path d="M22 44 V28 H38 M90 28 H106 V44 M106 84 V100 H90 M38 100 H22 V84" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M64 52 V76 M52 64 H76" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

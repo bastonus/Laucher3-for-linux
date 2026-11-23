@@ -1,0 +1,6 @@
+{
+  "name": "Frost × Launcher3 Icon Adapter",
+  "description": "Interactive Launcher3 icon adapter and Frost icon theme converter producing exact iOS continuous-curvature squircle icons with color-adapted backgrounds and 135-degree diagonal light-and-shadow strokes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
